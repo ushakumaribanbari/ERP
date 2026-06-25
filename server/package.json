@@ -1,0 +1,17 @@
+{
+  "name": "erp-server",
+  "version": "1.0.0",
+  "description": "ERP System Backend Server",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "type": "commonjs",
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  },
+  "dependencies": {
+    "nodemailer": "^9.0.1"
+  }
+}
