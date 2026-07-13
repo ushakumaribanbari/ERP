@@ -1,0 +1,31 @@
+.export-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.export-btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.pdf {
+    background: #dc3545;
+    color: white;
+}
+
+.excel {
+    background: #198754;
+    color: white;
+}
+
+.print {
+    background: #0d6efd;
+    color: white;
+}

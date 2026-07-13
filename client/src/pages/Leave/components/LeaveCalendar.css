@@ -1,0 +1,82 @@
+.calendar-card{
+
+background:white;
+
+padding:25px;
+
+border-radius:20px;
+
+margin-top:30px;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
+
+}
+
+
+.calendar{
+
+display:grid;
+
+grid-template-columns:repeat(7,1fr);
+
+gap:10px;
+
+margin-top:20px;
+
+}
+
+
+.day{
+
+height:45px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+border-radius:10px;
+
+background:#f8fafc;
+
+color:#334155;
+
+}
+
+
+.header{
+
+background:#2563eb;
+
+color:white;
+
+font-weight:600;
+
+}
+
+
+.leave-calendar-card h2 {
+
+    color: #1e293b !important;
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+    margin-bottom: 25px;
+}
+
+.leave-calendar-card {
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    margin-top: 30px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+
+}

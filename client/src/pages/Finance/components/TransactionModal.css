@@ -1,0 +1,90 @@
+.transaction-modal{
+
+    width:550px;
+
+    background:#ffffff;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.transaction-modal h2{
+
+    color:#111827;
+
+    font-size:30px;
+
+    font-weight:700;
+
+}
+
+.transaction-modal input,
+.transaction-modal select{
+
+    padding:14px;
+
+    border:1px solid #d1d5db;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+    color:#111827;
+
+}
+
+.transaction-actions{
+
+    display:flex;
+
+    gap:12px;
+
+    justify-content:flex-end;
+
+    margin-top:10px;
+
+}
+
+.save-transaction-btn{
+
+    background:#2563eb;
+
+    color:#ffffff;
+
+    border:none;
+
+    padding:12px 22px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+}
+
+.cancel-transaction-btn{
+
+    background:#ef4444;
+
+    color:#ffffff;
+
+    border:none;
+
+    padding:12px 22px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+}

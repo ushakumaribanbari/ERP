@@ -1,0 +1,140 @@
+.leave-type-card{
+
+background:white;
+
+margin-top:30px;
+
+padding:25px;
+
+border-radius:20px;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
+
+}
+
+.add-type-btn{
+    background: #2563EB;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-type-btn:hover{
+    background: #1D4ED8;
+    transform: translateY(-2px);
+}
+
+.leave-type-header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+
+.leave-type-header button{
+
+background:#2563eb;
+
+color:white;
+
+border:none;
+
+padding:12px 20px;
+
+border-radius:10px;
+
+}
+
+
+.leave-type-card table{
+
+width:100%;
+
+margin-top:20px;
+
+border-collapse:collapse;
+
+}
+
+
+.leave-type-card th {
+
+    color: #334155;
+
+    font-weight: 700;
+
+}
+
+
+.leave-type-card td {
+
+    color: #0f172a;
+
+    font-weight: 500;
+
+}
+
+
+.delete-type{
+
+background:#dc2626;
+
+color:white;
+
+border:none;
+
+padding:8px 15px;
+
+border-radius:8px;
+
+}
+
+.leave-type-card h2 {
+
+    color: #1e293b;
+
+    font-weight: 700;
+
+    font-size: 28px;
+
+}
+
+.modal-overlay{
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.4);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:1000;
+}
+
+.leave-type-modal{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    width:400px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.leave-type-modal input{
+    padding:12px;
+    border:1px solid #d1d5db;
+    border-radius:10px;
+}
+
+.modal-actions{
+    display:flex;
+    justify-content:flex-end;
+    gap:12px;
+}

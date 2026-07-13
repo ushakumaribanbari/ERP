@@ -191,8 +191,12 @@ const sendOtp = async (req, res) => {
     });
   } catch (error) {
     // Log full error details server-side for debugging
-    console.error('[OTP] Send error:', error.message);
-    console.error('[OTP] Stack:', error.stack);
+    console.log("==================================");
+    console.log("OTP ERROR");
+    console.log(error);
+    console.log(error.message);
+    console.log(error.stack);
+    console.log("==================================");
 
     // Return a user-friendly message based on the error type
     let clientMessage = 'Failed to send OTP. Please try again.';
@@ -393,6 +397,7 @@ const login = async (req, res) => {
         errors: errors.array().map((e) => ({ field: e.path, message: e.msg })),
       });
     }
+    
 
     const { email, password } = req.body;
 
@@ -439,9 +444,19 @@ const login = async (req, res) => {
       },
     });
   } catch (error) {
-    console.error('[Login] Error:', error.message);
-    return res.status(500).json({ success: false, message: 'Server error during login.' });
-  }
+
+    console.log("==================================");
+    console.log("LOGIN ERROR");
+    console.log(error);
+    console.log(error.stack);
+    console.log("==================================");
+
+    return res.status(500).json({
+        success: false,
+        message: error.message
+    });
+
+}
 };
 
 // ══════════════════════════════════════════════════════════════

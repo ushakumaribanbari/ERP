@@ -1,0 +1,56 @@
+.notification-card{
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    margin-top:30px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
+
+.notification-item{
+    padding:15px 0;
+    border-bottom:1px solid #000309;
+}
+
+.notification-item p{
+    font-weight:600;
+    color:#1e293b;
+}
+
+.notification-item span{
+    color:#01050c;
+    font-size:14px;
+}
+
+.notification-card h2 {
+
+    color:#1e293b !important;
+
+    font-size:28px;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+}
+
+.notification-card p {
+
+    color:#334155;
+
+    font-size:16px;
+
+}
+
+.notification-card {
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    margin-top:30px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.05);
+
+}

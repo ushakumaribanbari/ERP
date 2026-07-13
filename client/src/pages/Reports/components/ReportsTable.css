@@ -1,0 +1,32 @@
+.reports-table-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    overflow-x: auto;
+    box-shadow: var(--shadow);
+}
+
+.reports-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.reports-table th,
+.reports-table td {
+    padding: 18px;
+    text-align: left;
+}
+
+.reports-table th {
+    background: #2563eb;
+    color: white;
+    font-weight: 600;
+}
+
+.reports-table tr:nth-child(even) {
+    background: rgba(255,255,255,0.03);
+}
+
+.reports-table td {
+    color: #111827;
+    font-weight: 500;
+}

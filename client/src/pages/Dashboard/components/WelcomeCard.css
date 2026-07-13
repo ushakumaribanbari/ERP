@@ -1,0 +1,36 @@
+.welcome-card{
+    background:linear-gradient(135deg,#2563EB,#4F46E5);
+    color:white;
+
+    border-radius:20px;
+
+    padding:35px 40px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    box-shadow:0 15px 35px rgba(37,99,235,.25);
+}
+
+.welcome-card h1{
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+.welcome-card p{
+    opacity:.9;
+    font-size:17px;
+}
+
+.welcome-date{
+    text-align:right;
+}
+
+.welcome-date h3{
+    font-size:26px;
+}
+
+.welcome-date span{
+    opacity:.9;
+}

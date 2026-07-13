@@ -2,12 +2,21 @@
 // Main entry point — sets up Express, security middleware, DB connection, and routes.
 
 const path = require('path');
+
 require('dotenv').config({ path: path.join(__dirname, '.env') });
+
+console.log(
+"MONGO URI:",
+process.env.MONGO_URI
+);
+console.log("BREVO_API_KEY:", process.env.BREVO_API_KEY ? "FOUND" : "NOT FOUND");
+console.log("BREVO_SENDER_EMAIL:", process.env.BREVO_SENDER_EMAIL);
+console.log("JWT_SECRET =", process.env.JWT_SECRET);
 const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
-
+const leaveRoutes = require("./routes/leaveRoutes");
 const connectDB = require('./config/db');
 const authRoutes = require('./routes/authRoutes');
 
@@ -20,6 +29,7 @@ connectDB();
 // ── Security Middleware ───────────────────────────────────────
 // Helmet adds secure HTTP headers
 app.use(helmet());
+
 
 // CORS — allow requests from React frontend
 app.use(cors({
@@ -37,7 +47,9 @@ app.use(cors({
       callback(new Error(`CORS: Origin ${origin} not allowed`));
     }
   },
+
   credentials: true,
+
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
@@ -63,6 +75,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/api/auth/login', loginLimiter);
 
 
+
+app.use(
+"/api/leaves",
+leaveRoutes
+);
 // ── Routes ───────────────────────────────────────────────────
 // Health check
 app.get('/', (req, res) => {

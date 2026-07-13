@@ -1,0 +1,847 @@
+/* ═══════════════════════════════════════════════════════════════
+   REGISTER PAGE  –  Professional ERP Design
+   Font: Inter (loaded in index.html or via @import below)
+════════════════════════════════════════════════════════════════ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* ─── Root Tokens ─────────────────────────────────────────── */
+:root {
+  --brand-900: #0f1629;
+  --brand-800: #1a2340;
+  --brand-700: #1e3a5f;
+  --brand-600: #1d4ed8;
+  --brand-500: #2563eb;
+  --brand-400: #3b82f6;
+  --brand-300: #93c5fd;
+  --accent:    #6366f1;
+  --success:   #10b981;
+  --danger:    #ef4444;
+  --warning:   #f59e0b;
+
+  --text-primary:   #0f172a;
+  --text-secondary: #475569;
+  --text-muted:     #94a3b8;
+  --border:         #e2e8f0;
+  --border-focus:   #3b82f6;
+  --surface:        #ffffff;
+  --surface-alt:    #f8fafc;
+
+  --radius-sm:  6px;
+  --radius-md:  10px;
+  --radius-lg:  16px;
+  --radius-xl:  24px;
+
+  --shadow-card: 0 25px 60px rgba(15, 22, 41, 0.18), 0 8px 20px rgba(15, 22, 41, 0.08);
+  --shadow-btn:  0 4px 14px rgba(37, 99, 235, 0.35);
+}
+
+/* ─── Page Wrapper ────────────────────────────────────────── */
+.register-bg {
+  min-height: 100vh;
+  display: flex;
+  align-items: stretch;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #f1f5f9;
+}
+
+/* ─── Left Brand Panel ────────────────────────────────────── */
+.register-brand {
+  display: none;
+  flex: 0 0 420px;
+  background: linear-gradient(155deg, var(--brand-900) 0%, var(--brand-700) 55%, #0f3460 100%);
+  padding: 52px 48px;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 900px) {
+  .register-brand { display: flex; }
+}
+
+/* Decorative circles */
+.register-brand::before {
+  content: '';
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(99,102,241,0.25) 0%, transparent 70%);
+  top: -120px;
+  right: -140px;
+  pointer-events: none;
+}
+.register-brand::after {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(37,99,235,0.18) 0%, transparent 70%);
+  bottom: -80px;
+  left: -80px;
+  pointer-events: none;
+}
+
+.register-brand__logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.register-brand__logo-icon {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, var(--brand-400), var(--accent));
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.register-brand__logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-brand__logo-name {
+  font-size: 18px;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.3px;
+  line-height: 1;
+}
+
+.register-brand__logo-tag {
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--brand-300);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.register-brand__body {
+  position: relative;
+  z-index: 1;
+}
+
+.register-brand__headline {
+  font-size: 30px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.25;
+  margin-bottom: 14px;
+  letter-spacing: -0.5px;
+}
+
+.register-brand__headline span {
+  background: linear-gradient(90deg, var(--brand-300), #a5b4fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.register-brand__desc {
+  font-size: 14px;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.7;
+  margin-bottom: 36px;
+}
+
+.register-brand__features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.register-brand__feature {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.8);
+  font-weight: 500;
+}
+
+.register-brand__feature-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 15px;
+}
+
+.register-brand__footer {
+  position: relative;
+  z-index: 1;
+  font-size: 11px;
+  color: rgba(255,255,255,0.3);
+  line-height: 1.6;
+}
+
+/* ─── Right Form Panel ────────────────────────────────────── */
+.register-panel {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+  background: #f1f5f9;
+  overflow-y: auto;
+}
+
+/* ─── Card ───────────────────────────────────────────────── */
+.register-card {
+  width: 100%;
+  max-width: 480px;
+  background: var(--surface);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
+  padding: 44px 40px 36px;
+  animation: slideUp 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 540px) {
+  .register-card { padding: 32px 22px 28px; }
+}
+
+/* ─── Card Header ─────────────────────────────────────────── */
+.register-card__header {
+  margin-bottom: 28px;
+}
+
+.register-card__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--brand-500);
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  padding: 4px 10px;
+  border-radius: 100px;
+  margin-bottom: 14px;
+}
+
+.register-card__title {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+  margin: 0 0 6px;
+}
+
+.register-card__subtitle {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ─── Progress Steps ──────────────────────────────────────── */
+.register-steps {
+  display: flex;
+  align-items: center;
+  margin-bottom: 28px;
+  gap: 0;
+}
+
+.register-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  flex: 1;
+  position: relative;
+}
+
+.register-step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: calc(50% + 18px);
+  right: calc(-50% + 18px);
+  height: 2px;
+  background: var(--border);
+  transition: background 0.4s ease;
+}
+
+.register-step--done:not(:last-child)::after,
+.register-step--active:not(:last-child)::after {
+  background: linear-gradient(90deg, var(--success) 0%, var(--border) 100%);
+}
+
+.register-step--done + .register-step--done::before,
+.register-step--done:not(:last-child)::after {
+  background: var(--success);
+}
+
+.register-step__bubble {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  background: var(--surface-alt);
+  border: 2px solid var(--border);
+  color: var(--text-muted);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  z-index: 1;
+}
+
+.register-step--active .register-step__bubble {
+  background: var(--brand-500);
+  border-color: var(--brand-500);
+  color: #fff;
+  box-shadow: 0 0 0 5px rgba(37, 99, 235, 0.15);
+  transform: scale(1.1);
+}
+
+.register-step--done .register-step__bubble {
+  background: var(--success);
+  border-color: var(--success);
+  color: #fff;
+}
+
+.register-step__label {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.register-step--active .register-step__label {
+  color: var(--brand-500);
+}
+
+.register-step--done .register-step__label {
+  color: var(--success);
+}
+
+/* ─── Alerts ──────────────────────────────────────────────── */
+.register-alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.5;
+  animation: fadeIn 0.25s ease;
+  margin-bottom: 4px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.register-alert--error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+}
+
+.register-alert--success {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #15803d;
+}
+
+.register-alert--warning {
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  color: #92400e;
+}
+
+.register-alert__icon {
+  flex-shrink: 0;
+  margin-top: 1px;
+  font-size: 15px;
+}
+
+/* ─── Form ────────────────────────────────────────────────── */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.register-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 460px) {
+  .register-form__row { grid-template-columns: 1fr; }
+}
+
+.register-form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.register-form__label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.register-form__label-badge {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 1px 7px;
+  border-radius: 100px;
+  background: #dcfce7;
+  color: var(--success);
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+/* ─── Input Wrapper ───────────────────────────────────────── */
+.register-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.register-input-wrap--row {
+  display: flex;
+  gap: 8px;
+  align-items: stretch;
+}
+
+.register-input-icon {
+  position: absolute;
+  left: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+}
+
+.register-form__input {
+  width: 100%;
+  padding: 11px 14px 11px 38px;
+  background: var(--surface-alt);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+  box-sizing: border-box;
+}
+
+.register-form__input--no-icon {
+  padding-left: 14px;
+}
+
+.register-form__input::placeholder {
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.register-form__input:focus {
+  border-color: var(--border-focus);
+  background: var(--surface);
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+.register-form__input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background: #f0f4f8;
+}
+
+.register-form__input--verified {
+  border-color: var(--success) !important;
+  background: #f0fdf4 !important;
+}
+
+/* Select styling */
+select.register-form__input {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 14px;
+  padding-right: 36px;
+}
+
+/* OTP Input */
+.register-form__input--otp {
+  letter-spacing: 10px;
+  font-weight: 800;
+  font-size: 20px;
+  text-align: center;
+  padding-left: 14px;
+}
+
+/* ─── Inline Buttons (Send OTP / Verify) ─────────────────── */
+.register-btn-inline {
+  flex-shrink: 0;
+  padding: 0 18px;
+  height: auto;
+  min-height: 44px;
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, var(--brand-500), var(--accent));
+  border: none;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  white-space: nowrap;
+  transition: opacity 0.2s, transform 0.15s, box-shadow 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.register-btn-inline:hover:not(:disabled) {
+  opacity: 0.9;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.register-btn-inline:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.register-btn-inline--ghost {
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 0 10px;
+  min-height: auto;
+  text-decoration: underline;
+}
+
+.register-btn-inline--ghost:hover:not(:disabled) {
+  color: var(--text-secondary);
+  transform: none;
+  box-shadow: none;
+}
+
+/* ─── OTP Panel ──────────────────────────────────────────── */
+.register-otp-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  background: #f8faff;
+  border: 1.5px solid #bfdbfe;
+  border-radius: var(--radius-lg);
+  animation: fadeIn 0.3s ease;
+}
+
+/* Email chip shown in OTP phase */
+.register-otp-email-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.register-otp-email-chip svg {
+  color: var(--brand-400);
+  flex-shrink: 0;
+}
+
+.register-otp-email-chip span {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.register-otp-change {
+  background: none;
+  border: none;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--brand-500);
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  padding: 0;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.register-otp-change:hover { text-decoration: underline; }
+
+/* OTP resend hint */
+.register-otp-hint {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin: 4px 0 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.register-otp-resend-btn {
+  background: none;
+  border: none;
+  color: var(--brand-500);
+  cursor: pointer;
+  font-size: 12px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  padding: 0;
+  text-decoration: underline;
+}
+
+.register-otp-resend-btn:hover:not(:disabled) { color: var(--brand-700); }
+.register-otp-resend-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* ─── Eye Toggle Button ───────────────────────────────────── */
+.register-eye-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  line-height: 0;
+  transition: color 0.2s;
+}
+
+.register-eye-btn:hover { color: var(--text-secondary); }
+
+/* ─── Change Email Link ───────────────────────────────────── */
+.register-change-link {
+  background: none;
+  border: none;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  padding: 2px 0 0;
+  text-align: left;
+  transition: color 0.2s;
+}
+
+.register-change-link:hover { color: var(--brand-500); text-decoration: underline; }
+
+/* ─── Divider ─────────────────────────────────────────────── */
+.register-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin: 4px 0;
+}
+.register-divider::before,
+.register-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* ─── Submit Button ───────────────────────────────────────── */
+.register-form__submit {
+  margin-top: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 13px 24px;
+  border-radius: var(--radius-md);
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, var(--brand-600) 0%, var(--accent) 100%);
+  border: none;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.2px;
+  transition: opacity 0.2s, transform 0.15s, box-shadow 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.register-form__submit::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.12), transparent);
+  pointer-events: none;
+}
+
+.register-form__submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-btn);
+  opacity: 0.95;
+}
+
+.register-form__submit:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.register-form__submit:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Spinner */
+.register-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2.5px solid rgba(255,255,255,0.35);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ─── Footer ──────────────────────────────────────────────── */
+.register-form__footer-text {
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+
+.register-form__link {
+  color: var(--brand-500);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.register-form__link:hover { text-decoration: underline; }
+
+/* ─── Password Strength ───────────────────────────────────── */
+.register-pwd-strength {
+  display: flex;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.register-pwd-bar {
+  flex: 1;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--border);
+  transition: background 0.3s ease;
+}
+
+.register-pwd-bar--weak   { background: var(--danger); }
+.register-pwd-bar--fair   { background: var(--warning); }
+.register-pwd-bar--strong { background: var(--success); }
+
+.register-pwd-label {
+  font-size: 11px;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.register-pwd-label--weak   { color: var(--danger); }
+.register-pwd-label--fair   { color: var(--warning); }
+.register-pwd-label--strong { color: var(--success); }
+
+
+.register-card{
+    opacity: 1 !important;
+}
+
+.register-panel{
+    opacity: 1 !important;
+}
+
+.register-form{
+    opacity: 1 !important;
+}
+
+.register-form__group{
+    opacity: 1 !important;
+}
+
+.register-form__label{
+    color:#111827 !important;
+}
+
+.register-form__input{
+    background:#ffffff !important;
+    color:#111827 !important;
+    border:2px solid #cbd5e1 !important;
+    font-weight:600 !important;
+}
+
+.register-form__input::placeholder{
+    color:#6b7280 !important;
+    opacity:1 !important;
+}
+
+.register-card__title{
+    color:#111827 !important;
+}
+
+.register-card__subtitle{
+    color:#475569 !important;
+}

@@ -1,0 +1,222 @@
+.salary-table-card {
+
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+
+}
+
+.salary-table-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+
+}
+.empty-payroll {
+
+    text-align: center;
+
+    padding: 50px;
+
+    color: #64748b;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+}
+.salary-table-header h2 {
+
+    color: #0f172a;
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+}
+
+.salary-table-header p {
+
+    color: #475569;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+}
+
+.salary-table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+}
+
+.salary-table th {
+
+    text-align: left;
+
+    padding: 18px;
+
+    background: #f8fafc;
+
+    color: #334155;
+
+    font-weight: 700;
+
+}
+
+.salary-table td {
+
+    padding: 18px;
+
+    border-bottom: 1px solid #e2e8f0;
+
+    color: #0f172a;
+
+    font-weight: 500;
+
+}
+.salary-actions {
+
+    display: flex;
+
+    gap: 10px;
+
+}
+
+.salary-status {
+
+    padding: 8px 14px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+}
+
+.delete-btn {
+
+    background: #dc2626;
+
+    color: white;
+
+    border: none;
+
+    padding: 8px 14px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+}
+
+.salary-status.paid {
+
+    background: #dcfce7;
+
+    color: #166534;
+
+}
+
+.salary-status.pending {
+
+    background: #fef3c7;
+
+    color: #92400e;
+
+}
+
+.view-btn {
+
+    background: #2563eb;
+
+    color: white;
+
+    border: none;
+
+    padding: 10px 16px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+}
+
+.view-btn:hover {
+
+    background: #1d4ed8;
+
+}
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+}
+
+th {
+
+    padding: 16px;
+
+    text-align: left;
+
+    background: #f8fafc;
+
+    color: #0f172a;
+
+    font-weight: 700;
+
+    font-size: 15px;
+
+}
+
+td {
+
+    padding: 18px 16px;
+
+    color: #1e293b;
+
+    font-weight: 500;
+
+    border-bottom: 1px solid #e2e8f0;
+
+}
+
+.net-salary {
+
+    color: #16a34a;
+
+    font-weight: 700;
+
+}
+
+.paid-status {
+
+    background: #dcfce7;
+
+    color: #166534;
+
+    padding: 8px 14px;
+
+    border-radius: 20px;
+
+    font-weight: 700;
+
+}

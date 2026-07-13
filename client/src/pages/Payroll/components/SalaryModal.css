@@ -1,0 +1,116 @@
+.modal-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0,0,0,0.45);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 1000;
+
+}
+
+.salary-modal {
+
+    width: 550px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+}
+
+.salary-modal h2 {
+
+    color: #0f172a;
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+}
+
+.salary-modal input,
+.salary-modal select {
+
+    padding: 14px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+
+    color: #0f172a;
+
+}
+
+.net-salary-box {
+
+    background: #eff6ff;
+
+    padding: 18px;
+
+    border-radius: 12px;
+
+    color: #1e40af;
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+}
+
+.salary-actions {
+
+    display: flex;
+
+    gap: 15px;
+
+}
+
+.generate-btn {
+
+    background: #2563eb;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 20px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+}
+
+.cancel-btn {
+
+    background: #ef4444;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 20px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+}

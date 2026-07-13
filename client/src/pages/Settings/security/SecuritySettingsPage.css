@@ -1,0 +1,87 @@
+.security-page {
+    padding: 24px;
+}
+
+.security-header {
+    margin-bottom: 24px;
+}
+
+.security-header h1 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.security-header p {
+    color: #6B7280;
+    margin-top: 8px;
+}
+
+.security-card {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    border: 1px solid #E5E7EB;
+}
+
+.security-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+    padding: 12px;
+    border: 1px solid #D1D5DB;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.toggle-container {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.toggle-label {
+    font-weight: 600;
+}
+
+.save-btn {
+    margin-top: 25px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    background: #2563EB;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+.profile-header h1,
+.security-header h1,
+.notification-header h1,
+.preferences-header h1 {
+    color: #111827;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.profile-header p,
+.security-header p,
+.notification-header p,
+.preferences-header p {
+    color: #4B5563;
+    font-size: 16px;
+    font-weight: 500;
+}

@@ -1,0 +1,42 @@
+.inventory-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.stat-card {
+    background: var(--card-bg);
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stat-card {
+    border-top: 5px solid #3b82f6;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+}
+
+.stat-card h3 {
+    margin: 0;
+    font-size: 14px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.stat-card h2 {
+    margin-top: 12px;
+    margin-bottom: 0;
+    font-size: 2rem;
+    color: #111827;
+    font-weight: 700;
+
+    word-break: break-word;
+    overflow-wrap: break-word;
+}

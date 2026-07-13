@@ -1,0 +1,63 @@
+.product-table-card{
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.table-header{
+    margin-bottom: 20px;
+}
+
+.table-wrapper{
+    overflow-x: auto;
+}
+
+.product-table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.product-table th,
+.product-table td{
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.status-badge{
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.in-stock{
+    background: rgba(0,200,0,0.15);
+}
+
+.low-stock{
+    background: rgba(255,165,0,0.2);
+}
+
+.out-of-stock{
+    background: rgba(255,0,0,0.2);
+}
+
+.action-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.edit-btn,
+.delete-btn {
+    min-width: 70px;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.empty-table{
+    text-align:center;
+    padding:30px;
+}

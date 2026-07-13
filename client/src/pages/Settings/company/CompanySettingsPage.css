@@ -1,0 +1,135 @@
+.company-page {
+    padding: 24px;
+    background: #f5f7fb;
+    min-height: 100vh;
+    color: #111827;
+}   
+
+.company-header {
+    margin-bottom: 24px;
+}
+
+.company-header h1 {
+    color: #111827 !important;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.company-header p {
+    color: #4B5563 !important;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.company-header {
+    opacity: 1 !important;
+}
+
+.company-header * {
+    opacity: 1 !important;
+}
+
+.company-card {
+    background: white;
+    border: 1px solid #E5E7EB;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+
+}
+
+.company-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    color: #111827;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    background: white;
+    color: #111827;
+    border: 1px solid #D1D5DB;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #9CA3AF;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #3B82F6;
+    box-shadow: 0 0 0 3px rgba(59,130,246,0.2);
+}
+
+.full-width {
+    grid-column: span 2;
+}
+
+.save-btn {
+    margin-top: 25px;
+    padding: 12px 24px;
+    background: #2563EB;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.save-btn:hover {
+    background: #1D4ED8;
+}
+
+.profile-header h1,
+.security-header h1,
+.notification-header h1,
+.preferences-header h1 {
+    color: #111827;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.profile-header p,
+.security-header p,
+.notification-header p,
+.preferences-header p {
+    color: #4B5563;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.company-page h1 {
+    color: #111827 !important;
+}
+
+.company-page p {
+    color: #4B5563 !important;
+}
+
+.company-page .company-header h1 {
+    color: #111827 !important;
+    opacity: 1 !important;
+}
+
+.company-page .company-header p {
+    color: #4B5563 !important;
+    opacity: 1 !important;
+}

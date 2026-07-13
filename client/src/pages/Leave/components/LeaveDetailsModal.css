@@ -1,0 +1,230 @@
+.leave-modal-overlay{
+
+position:fixed;
+
+inset:0;
+
+background:rgba(0,0,0,0.4);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:1000;
+
+}
+
+
+
+.leave-details-modal{
+
+background:white;
+
+width:450px;
+
+border-radius:16px;
+
+padding:25px;
+
+box-shadow:0 20px 40px rgba(0,0,0,0.2);
+
+}
+
+
+
+.modal-header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:20px;
+
+}
+
+
+
+.modal-header button{
+
+border:none;
+
+background:none;
+
+font-size:20px;
+
+cursor:pointer;
+
+}
+
+
+
+.leave-details p{
+
+margin:12px 0;
+
+color:#334155;
+
+}
+
+
+.leave-details b{
+
+display:inline-block;
+
+width:130px;
+
+color:#0f172a;
+
+}
+
+.modal-status{
+
+    padding:6px 14px;
+
+    border-radius:20px;
+
+    font-weight:600;
+
+    margin-left:10px;
+
+}
+
+
+.modal-status.approved{
+
+    background:#dcfce7;
+
+    color:#16a34a;
+
+}
+
+
+.modal-status.rejected{
+
+    background:#fee2e2;
+
+    color:#dc2626;
+
+}
+
+
+.modal-status.pending{
+
+    background:#fef3c7;
+
+    color:#d97706;
+}
+
+.timeline{
+
+    margin-top:20px;
+
+}
+
+.timeline-title{
+
+color:#0f172a;
+
+font-size:20px;
+
+font-weight:700;
+
+}
+.timeline-item{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-bottom:15px;
+
+}
+
+
+.timeline-dot{
+
+    width:12px;
+
+    height:12px;
+
+    background:#2563eb;
+
+    border-radius:50%;
+
+    margin-top:6px;
+
+}
+
+
+.timeline-item strong{
+
+    color:#1e293b;
+
+}
+
+
+.timeline-item p{
+
+    margin:5px 0;
+
+    color:#64748b;
+
+}
+
+.leave-details-modal h2 {
+
+    color: #0f172a;
+
+    font-size: 26px;
+
+    font-weight: 700;
+
+    margin-bottom: 25px;
+
+}
+
+
+.leave-details-modal h3 {
+
+    color: #0f172a;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+}
+
+
+.leave-details p {
+
+    color: #475569;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+}
+
+
+.leave-details p b {
+
+    color: #1e293b;
+
+    font-weight: 700;
+
+}
+
+
+.leave-details-modal hr {
+
+    border: none;
+
+    border-top: 1px solid #cbd5e1;
+
+    margin: 20px 0;
+
+}

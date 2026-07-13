@@ -1,0 +1,151 @@
+.payslip-modal {
+
+    width: 650px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 35px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+}
+
+.payslip-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+
+}
+
+.payslip-header h2 {
+
+    color: #0f172a;
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+}
+
+.company-info {
+
+    text-align: center;
+
+    margin-bottom: 30px;
+
+}
+
+.company-info h3 {
+
+    color: #0f172a;
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+}
+
+.company-info p {
+
+    color: #475569;
+
+    font-size: 15px;
+
+}
+
+.payslip-details p {
+
+    color: #1e293b;
+
+    font-size: 16px;
+
+    margin-bottom: 10px;
+
+}
+
+.salary-breakdown h3 {
+
+    color: #0f172a;
+
+    font-size: 22px;
+
+    margin-bottom: 20px;
+
+}
+
+.salary-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 12px 0;
+
+    color: #334155;
+
+    border-bottom: 1px solid #e2e8f0;
+
+}
+
+.salary-row.total {
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    color: #16a34a;
+
+}
+
+.salary-row.deduction {
+
+    color: #dc2626;
+
+}
+
+
+.modal-actions{
+    display:flex;
+    gap:12px;
+    justify-content:flex-end;
+    margin-top:24px;
+}
+
+.download-btn{
+    background:#2563eb;
+    color:#ffffff;
+    border:none;
+    padding:12px 24px;
+    border-radius:10px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s ease;
+}
+
+.download-btn:hover{
+    background:#1d4ed8;
+}
+
+.close-btn{
+    background:#ef4444;
+    color:#ffffff;
+    border:none;
+    padding:12px 24px;
+    border-radius:10px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s ease;
+}
+
+.close-btn:hover{
+    background:#dc2626;
+}

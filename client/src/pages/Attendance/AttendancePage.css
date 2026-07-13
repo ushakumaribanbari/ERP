@@ -1,0 +1,70 @@
+.attendance-page{
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+    padding:34px;
+    background:#f3f6fb;
+    min-height:100vh;
+}
+.undo-snackbar{
+
+    position:fixed;
+
+    bottom:25px;
+
+    right:25px;
+
+    background:#1e293b;
+
+    color:white;
+
+    padding:15px 22px;
+
+    border-radius:12px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.25);
+
+    z-index:9999;
+
+    animation:slideUp .3s ease;
+}
+
+.undo-snackbar button{
+
+    border:none;
+
+    background:none;
+
+    color:#60a5fa;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    font-size:15px;
+}
+
+.undo-snackbar button:hover{
+
+    color:white;
+}
+
+@keyframes slideUp{
+
+    from{
+        transform:translateY(40px);
+        opacity:0;
+    }
+
+    to{
+        transform:translateY(0);
+        opacity:1;
+    }
+
+}

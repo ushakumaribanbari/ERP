@@ -1,0 +1,79 @@
+.leave-stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+    margin-top:30px;
+
+}
+
+
+.leave-card{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    border-top:5px solid;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.05);
+
+}
+
+
+.leave-card h3{
+
+    color:#64748b;
+
+}
+
+
+.leave-card h1{
+
+    font-size:42px;
+
+    margin:15px 0;
+
+    color:#1e293b;
+
+}
+
+
+.leave-card p{
+
+    color:#64748b;
+
+}
+
+
+.orange{
+
+    border-color:#f59e0b;
+
+}
+
+
+.green{
+
+    border-color:#16a34a;
+
+}
+
+
+.red{
+
+    border-color:#dc2626;
+
+}
+
+
+.blue{
+
+    border-color:#2563eb;
+
+}

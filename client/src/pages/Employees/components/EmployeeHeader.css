@@ -1,0 +1,53 @@
+.employee-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:30px;
+
+}
+
+.employee-header h1{
+
+    font-size:34px;
+
+    color:#0F172A;
+
+}
+
+.employee-header p{
+
+    margin-top:8px;
+
+    color:#64748B;
+
+}
+
+.employee-header button{
+
+    background:#2563EB;
+
+    color:white;
+
+    border:none;
+
+    padding:14px 22px;
+
+    border-radius:12px;
+
+    font-size:15px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.employee-header button:hover{
+
+    background:#1D4ED8;
+
+}

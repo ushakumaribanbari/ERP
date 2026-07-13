@@ -1,0 +1,48 @@
+.finance-stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:24px;
+}
+
+.finance-card{
+    background:#ffffff;
+    border-radius:20px;
+    padding:24px;
+    box-shadow:0 4px 20px rgba(0,0,0,0.05);
+}
+
+.finance-card h3{
+    color:#374151;
+    font-size:16px;
+    font-weight:600;
+    margin-bottom:12px;
+}
+
+.finance-card h2{
+    color:#111827;
+    font-size:34px;
+    font-weight:700;
+    margin-bottom:8px;
+}
+
+.finance-card p{
+    color:#6b7280;
+    font-size:14px;
+    font-weight:500;
+}
+
+.revenue{
+    border-top:5px solid #10b981;
+}
+
+.expense{
+    border-top:5px solid #ef4444;
+}
+
+.profit{
+    border-top:5px solid #2563eb;
+}
+
+.pending{
+    border-top:5px solid #f59e0b;
+}

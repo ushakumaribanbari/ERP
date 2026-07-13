@@ -1,0 +1,40 @@
+.transaction-card{
+    background:#ffffff;
+    border-radius:20px;
+    padding:24px;
+}
+
+.transaction-header{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:20px;
+}
+
+.transaction-header h2{
+    color:#111827;
+    font-size:30px;
+    font-weight:700;
+}
+
+.transaction-header p{
+    color:#6b7280;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    text-align:left;
+    color:#374151;
+    padding:16px;
+    background:#f3f4f6;
+}
+
+td{
+    padding:16px;
+    color:#111827;
+    border-bottom:1px solid #e5e7eb;
+}
+

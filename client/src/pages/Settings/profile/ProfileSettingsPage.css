@@ -1,0 +1,41 @@
+.profile-page {
+    padding: 24px;
+}
+
+.profile-header {
+    margin-bottom: 24px;
+}
+
+.profile-card {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    border: 1px solid #E5E7EB;
+}
+
+.profile-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+
+.full-width {
+    grid-column: span 2;
+}
+.profile-header h1,
+.security-header h1,
+.notification-header h1,
+.preferences-header h1 {
+    color: #111827;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.profile-header p,
+.security-header p,
+.notification-header p,
+.preferences-header p {
+    color: #4B5563;
+    font-size: 16px;
+    font-weight: 500;
+}

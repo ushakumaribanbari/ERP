@@ -1,0 +1,45 @@
+/* =========================
+   LIGHT THEME
+========================= */
+
+[data-theme="light"] {
+    --bg-primary: #F5F7FB;
+    --bg-secondary: #FFFFFF;
+    --card-bg: #FFFFFF;
+
+    --text-primary: #111827;
+    --text-secondary: #4B5563;
+
+    --border-color: #E5E7EB;
+
+    --sidebar-bg: #FFFFFF;
+    --navbar-bg: #FFFFFF;
+
+    --hover-bg: #F3F4F6;
+    --input-bg: #FFFFFF;
+
+    --shadow-color: rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   DARK THEME
+========================= */
+
+[data-theme="dark"] {
+    --bg-primary: #111827;
+    --bg-secondary: #1F2937;
+    --card-bg: #1F2937;
+
+    --text-primary: #F9FAFB;
+    --text-secondary: #D1D5DB;
+
+    --border-color: #374151;
+
+    --sidebar-bg: #0F172A;
+    --navbar-bg: #1E293B;
+
+    --hover-bg: #374151;
+    --input-bg: #374151;
+
+    --shadow-color: rgba(0, 0, 0, 0.4);
+}
