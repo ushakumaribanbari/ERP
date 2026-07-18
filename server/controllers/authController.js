@@ -25,7 +25,7 @@ const buildOtpEmailHtml = (otpCode, email) => `
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Email Verification — NexusERP</title>
+  <title>Email Verification — AiCoreSystemERP</title>
 </head>
 <body style="margin:0;padding:0;background:#f1f5f9;font-family:'Segoe UI',Arial,sans-serif;">
   <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
@@ -47,7 +47,7 @@ const buildOtpEmailHtml = (otpCode, email) => `
                 </div>
                 <span style="color:#ffffff;font-size:20px;font-weight:800;
                              letter-spacing:-0.3px;vertical-align:middle;">
-                  NexusERP
+                  AiCoreSystemERP
                 </span>
               </div>
               <p style="color:rgba(255,255,255,0.75);font-size:13px;margin:6px 0 0;">
@@ -64,7 +64,7 @@ const buildOtpEmailHtml = (otpCode, email) => `
                 Verify Your Email Address
               </h1>
               <p style="color:#475569;font-size:14px;line-height:1.7;margin:0 0 28px;">
-                You requested access to the NexusERP system.<br/>
+                You requested access to the AiCoreSystemERP system.<br/>
                 Use the one-time password (OTP) below to verify your email:
               </p>
 
@@ -91,7 +91,7 @@ const buildOtpEmailHtml = (otpCode, email) => `
                           padding:14px 16px;margin:0 0 24px;">
                 <p style="color:#92400e;font-size:12px;line-height:1.6;margin:0;">
                   <strong>🔒 Security notice:</strong> Never share this code with anyone.
-                  NexusERP staff will never ask for your OTP. If you did not request this,
+                  AiCoreSystemERP staff will never ask for your OTP. If you did not request this,
                   please ignore this email — the code will expire automatically.
                 </p>
               </div>
@@ -108,7 +108,7 @@ const buildOtpEmailHtml = (otpCode, email) => `
             <td style="background:#f8fafc;border-top:1px solid #e2e8f0;
                        padding:20px 40px;text-align:center;">
               <p style="color:#94a3b8;font-size:11px;margin:0;line-height:1.6;">
-                © ${new Date().getFullYear()} NexusERP · All rights reserved.<br/>
+                © ${new Date().getFullYear()} AiCoreSystemERP · All rights reserved.<br/>
                 This is an automated message — please do not reply.
               </p>
             </td>
@@ -177,7 +177,7 @@ const sendOtp = async (req, res) => {
     // used only inside this function scope — it is NEVER logged.
     await sendEmail({
       email,
-      subject: 'Your NexusERP Registration OTP',
+      subject: 'Your AiCoreSystemERP Registration OTP',
       html: buildOtpEmailHtml(otpCode, email),
     });
 
@@ -495,8 +495,8 @@ const forgotPassword = async (req, res) => {
 
     await sendEmail({
       email,
-      subject: 'Password Reset — NexusERP',
-      html: buildOtpEmailHtml(otpCode, email).replace('Verify Your Email Address', 'Reset Your Password').replace('You requested access to the NexusERP system.', 'You requested a password reset for your NexusERP account.'),
+      subject: 'Password Reset — AiCoreSystemERP',
+      html: buildOtpEmailHtml(otpCode, email).replace('Verify Your Email Address', 'Reset Your Password').replace('You requested access to the AiCoreSystemERP system.', 'You requested a password reset for your AiCoreSystemERP account.'),
     });
 
     console.log(`[Forgot Password] OTP Sent → ${email}`);

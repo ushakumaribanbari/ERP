@@ -15,24 +15,32 @@ function LoginPage() {
   const [error, setError] = useState('');
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setError('');
+  e.preventDefault();
+  setError('');
 
-    if (!email || !password) {
-      setError('Please fill in all fields.');
-      return;
-    }
+  if (!email || !password) {
+    setError('Please fill in all fields.');
+    return;
+  }
 
-    setLoading(true);
-    try {
-      await login(email, password, rememberMe);
-      navigate('/dashboard');
-    } catch (err) {
-      setError(err.response?.data?.message || 'Login failed. Please check your credentials.');
-    } finally {
-      setLoading(false);
-    }
-  };
+  setLoading(true);
+
+  try {
+    await login(email, password, rememberMe);
+
+    localStorage.setItem("isLoggedIn", "true");
+
+    navigate("/dashboard");
+
+  } catch (err) {
+    setError(
+      err.response?.data?.message ||
+      'Login failed. Please check your credentials.'
+    );
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
   <div className="login-bg">

@@ -318,7 +318,7 @@ function RegisterPage() {
         <div className="register-brand__logo">
           <div className="register-brand__logo-icon"><ERPLogo /></div>
           <div className="register-brand__logo-text">
-            <span className="register-brand__logo-name">NexusERP</span>
+            <span className="register-brand__logo-name">AiCoreSystem ERP</span>
             <span className="register-brand__logo-tag">Enterprise Platform</span>
           </div>
         </div>
@@ -328,7 +328,7 @@ function RegisterPage() {
             The command center for your <span>entire business</span>
           </h2>
           <p className="register-brand__desc">
-            Join your team on NexusERP — a unified platform for HR, inventory,
+            Join your team on AICoreSystemERP — a unified platform for HR, inventory,
             finance, and operations. Everything you need, in one place.
           </p>
           <ul className="register-brand__features">
@@ -347,7 +347,7 @@ function RegisterPage() {
         </div>
 
         <p className="register-brand__footer">
-          © {new Date().getFullYear()} NexusERP · All rights reserved.<br />
+          © {new Date().getFullYear()} AiCoreSystem · All rights reserved.<br />
           Secure · Reliable · Enterprise-ready
         </p>
       </aside>

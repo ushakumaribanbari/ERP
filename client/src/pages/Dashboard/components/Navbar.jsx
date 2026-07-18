@@ -1,11 +1,21 @@
 import "./Navbar.css";
-
+import { FaSignOutAlt } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../../context/AuthContext";
 import { FaBell } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
 import { FaMoon } from "react-icons/fa";
 import { FaUserCircle } from "react-icons/fa";
 
 function Navbar() {
+
+    const navigate = useNavigate();
+const { logout } = useAuth();
+
+const handleLogout = () => {
+    logout();          // Clears token & auth state
+    navigate("/login");
+};
     return (
 
         <header className="navbar">
@@ -30,6 +40,14 @@ function Navbar() {
                 <button className="icon-btn">
                     <FaMoon />
                 </button>
+
+                <button
+    className="logout-btn"
+    onClick={handleLogout}
+    title="Logout"
+>
+    <FaSignOutAlt />
+</button>
 
                 <div className="profile">
 

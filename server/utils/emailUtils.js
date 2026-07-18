@@ -14,7 +14,7 @@ const sendEmail = async ({ email, subject, html }) => {
         await apiInstance.sendTransacEmail({
 
             sender: {
-                name: "NexusERP",
+                name: "AiCoreSystemERP",
                 email: process.env.BREVO_SENDER_EMAIL
             },
 

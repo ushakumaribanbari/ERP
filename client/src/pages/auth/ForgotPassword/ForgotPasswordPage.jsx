@@ -166,7 +166,7 @@ function ForgotPasswordPage() {
     <div className="forgot-bg">
       <div className="forgot-brand">
         <div className="forgot-logo">
-          <ERPLogo /> NexusERP
+          <ERPLogo /> AICoreSystemERP
         </div>
         <div>
           <h2>Secure Account Recovery</h2>

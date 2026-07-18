@@ -98,3 +98,26 @@
 
     color:#64748B;
 }
+
+.logout-btn{
+    width:48px;
+    height:48px;
+    border:none;
+    border-radius:12px;
+    background:#fff;
+    cursor:pointer;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    transition:.25s;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+.logout-btn:hover{
+    background:#ef4444;
+    color:white;
+    transform:translateY(-2px);
+}
