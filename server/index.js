@@ -36,11 +36,10 @@ app.use(cors({
   origin: (origin, callback) => {
     // Allow requests from any localhost port (Vite can pick 5173, 5174, etc.)
     // and allow no-origin requests (e.g. curl / Postman)
-    const allowedOrigins = [
-      'http://localhost:5173',
-      'http://localhost:5174',
-      'http://localhost:3000',
-    ];
+  const allowedOrigins = [
+  'https://erp-skfy.onrender.com',
+  'https://erp.aicoresystem.in',
+];
     if (!origin || allowedOrigins.includes(origin) || /^http:\/\/localhost:\d+$/.test(origin)) {
       callback(null, true);
     } else {
@@ -108,6 +107,6 @@ app.use((err, req, res, next) => {
 
 // ── Start Server ──────────────────────────────────────────────
 app.listen(PORT, () => {
-  console.log(`✅ Server running on http://localhost:${PORT}`);
+  console.log(`✅ Server running on https://erp-skfy.onrender.com:${PORT}`);
   console.log(`🌍 Environment: ${process.env.NODE_ENV}`);
 });

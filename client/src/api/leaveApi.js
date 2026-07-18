@@ -1,7 +1,7 @@
 import axios from "axios";
 
 
-const API_URL="http://localhost:5000/api/leaves";
+const API_URL="https://erp-skfy.onrender.com/api/leaves";
 
 
 export const getLeaves = () =>{
